@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable CPU Turbo Boost
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cpupower -c all set -b 0
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
