@@ -3,7 +3,7 @@ Description=Disable XHC1 and LID0 wakeup
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sh -c "echo 'XHC1' > /proc/acpi/wakeup; echo 'LID0' > /proc/acpi/wakeup"
+ExecStart=/bin/sh -c "echo 'XHC1' > /proc/acpi/wakeup"
 
 [Install]
 WantedBy=multi-user.target
