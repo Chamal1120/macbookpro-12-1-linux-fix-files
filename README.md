@@ -13,12 +13,13 @@ These are the fix files that I have found during my journey to make my mbp works
 3. **mpbfan.conf** is the config file for the fan temp thresholds.
 4. **tlp.conf** has my custom cpu thresholds. (I turned turbo boost off here).
 5. **wpa_suppplicant** file is the last known version that works with the WiFi driver.
-6. The UDEV rule files are from a arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need.
-*You also need the remove_ignore_usb_device.sh in order to get UDEV files working.*
 
 ```bash
 pacman -U <package-name> # Install it using this commmand
 ```
+
+6. The UDEV rule files are from a arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need.
+*You also need the remove_ignore_usb_device.sh in order to get UDEV files working.*
 
 # Automaitc Install
 
