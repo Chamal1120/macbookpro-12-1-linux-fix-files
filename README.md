@@ -12,13 +12,8 @@ These are the fix files that I have found during my journey to make my mbp works
 2. Copy the **brcmfmac.conf** file to **/etc/mordprobe.d/** to fix wifi not connecting and reprompt to enter the password.
 2. **mpbfan.conf** is the config file for the fan temp thresholds.
 3. **tlp.conf** has my custom cpu thresholds. (I turned turbo boost off here).
-
-```bash
-pacman -U <package-name> # Install it using this commmand
-```
-
 4. The UDEV rule files are from a arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need.
-*You also need the remove_ignore_usb_device.sh in order to get UDEV files working.*
+_Note - **You also need the remove_ignore_usb_device.sh in order to get UDEV files working.**_
 
 ### What's in old-wifi-fixes?
 
@@ -26,6 +21,10 @@ Some fixes that I used before the new fix mentioned in the `#How to use` section
 
 1. **wifi-reload.sh** is my custom script to disable wifi when device suspends that also helps to fix suspend issues and get wifi working after waking up. The script disables on suspend and enables on wakeup.
 2. **wpa_suppplicant** file is the last known version that works with the above wifi fix. (Please make sure you ignore upgrades for this package using your package manager config)
+
+```bash
+pacman -U <package-name> # Install it using this commmand if using arch linux
+```
 
 ### Automaitc Install
 
