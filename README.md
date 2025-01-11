@@ -6,31 +6,25 @@ These are the fix files that I have found during my journey to make my mbp works
 - Tested linux distro: Arch linux, EndeavourOS, Opensuse tumbleweed
 - Tested WMs: i3, sway and Hyprland
 
-### How to use
+### Manual Install
 
-1. Add **disable-wakeup.service** as a systemd service to disable XHC1 (which is responsible for USB wakeups). This workaround fixes the macbook immedaitely waking up when suspended.
-
-```bash
-pacman -U <package-name> # Install it using this commmand if using arch linux
-```
-
-2. Install **wpa_suppplicant** package which is the last known version that works with the wifi-driver. (Please make sure you ignore upgrades for this package using your package manager config).
-3. **wifi-reload.sh** is my custom script to disable wifi when device suspends that also helps to fix suspend issues and get wifi working after waking up. The script unloads wifi driver on suspend and loads back on wakeup.
+1. Add **disable-wakeup.service** as a systemd service to disable XHC1 (which is responsible for USB wakeups) LID0 (responsible for lid based wakeups). This workaround fixes the macbook immedaitely waking up when suspended.
+2. Copy **wif_rand_mac.conf** to /etc/NetworkManager/conf.d/wifi_rand_mac.conf to disable mac randomization.
+3. Install **wpa_suppplicant 2:2.10-8** package which is the last known version that works with the wifi-driver. (Please make sure you ignore upgrades for this package using your package manager config).
 4. Install **mpbfan** and **tlp** from your distro's package repositories.
 5. Copy **mpbfan.conf** to /etc/ to get my fan speed thresholds.
 6. Copy **tlp.conf** to /etc/ to get my custom cpu frequency thresholds.
 7. The UDEV rule files are from an arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need.
 _Note - **You also need the remove_ignore_usb_device.sh in order to get UDEV files working.**_
 
-### What's in wifi-optional-fix?
+### Package Installers
 
-Some optional wifi fixes that you can try.
+As of now AUR package exists for Arch Users.
 
-1. Copy the **brcmfmac.conf** file to **/etc/mordprobe.d/** to fix wifi not connecting and reprompting to enter the password and not detecting any network after resuming from suspend.
-
-### Automaitc Install
-
-A script is WIP.
+```bash
+yay -S macbook-12-1-linux-fixes
+```
+NOTE: Don't forget to follow the instructions displayed after the installation.
 
 ### Some extra tips
 
