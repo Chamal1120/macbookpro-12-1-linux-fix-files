@@ -2,9 +2,10 @@
 
 These are the fix files that I have found during my journey to make my mbp works as smoothly as possible on linux.
 
-- Tested linux kernel: 6.10.4-arch2-1 to 6.12.7-arch1-1
-- Tested linux distro: Arch linux, EndeavourOS, Opensuse tumbleweed
-- Tested WMs: i3, sway and Hyprland
+Tested on:
+- kernel: 6.10.4-arch2-1 to 6.12.7-arch1-1(mainline), 6.6.70-1-lts (lts)
+- distro: Arch linux, EndeavourOS, Opensuse tumbleweed
+- WMs: i3, sway and Hyprland
 
 ### Manual Install
 
@@ -28,11 +29,11 @@ sudo pacman -U wpa_supplicant-2:2.10-8-x86_64.pkg.tar.zst
 
 Optional:
 
-1. The UDEV rule files are from an arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need.
+1. The UDEV rule files are from an arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need them.
 
 > [!NOTE]
 > You also need the remove_ignore_usb_device.sh in order to get UDEV files working.
-> More that can be found in this arch linux thread - [https://wiki.archlinux.org/title/User:Elinux/MacBook_Pro_12,1#Powersave](https://wiki.archlinux.org/title/User:Elinux/MacBook_Pro_12,1#Powersave)
+> More info can be found in this arch linux thread - [https://wiki.archlinux.org/title/User:Elinux/MacBook_Pro_12,1#Powersave](https://wiki.archlinux.org/title/User:Elinux/MacBook_Pro_12,1#Powersave)
 
 ### Package Installers
 
@@ -44,6 +45,7 @@ yay -S macbook-12-1-linux-fixes
 > [!IMPORTANT]
 > Don't forget to follow the instructions displayed after the installation.
 
+### Some extra Tips
 
 > [!TIP]
 > 1. To get HW acceleration enabled for h264 videos. You can run `sudo pacman -S intel_media_driver` and add `LIBVA_DRIVER_NAME=iHD` to your shell configuration file. (ie - .zshrc for zsh).
