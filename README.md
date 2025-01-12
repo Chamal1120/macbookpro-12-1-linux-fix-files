@@ -41,7 +41,7 @@ An AUR package is available for Arch Linux users.
 ```bash
 yay -S macbook-12-1-linux-fixes
 ```
-[!IMPORTANT]
+> [!IMPORTANT]
 > Don't forget to follow the instructions displayed after the installation.
 
 
