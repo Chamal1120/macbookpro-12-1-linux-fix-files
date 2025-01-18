@@ -1,4 +1,5 @@
 ## Linux fixes for the apple macbook pro 2015 13 inch (12,1)
+These are the fix files that I have found during my journey to make my mbp works as smoothly as possible on linux.
 
 ### What works?
 
@@ -9,7 +10,6 @@
  - Bluetooth = Yes (But the sound quality is not good)
  - Power Management = Yes (Auto wake with LID open has to disable)
 
-These are the fix files that I have found during my journey to make my mbp works as smoothly as possible on linux.
 
 Tested on:
 - kernel: 6.10.4-arch2-1 to 6.12.7-arch1-1(mainline), 6.6.70-1-lts (lts)
