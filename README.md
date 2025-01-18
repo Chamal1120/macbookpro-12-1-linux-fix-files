@@ -55,7 +55,7 @@ yay -S macbook-12-1-linux-fixes
 > 1. To get HW acceleration enabled for h264 videos. You can run `sudo pacman -S intel_media_driver` and add `LIBVA_DRIVER_NAME=iHD` to your shell configuration file. (ie - .zshrc for zsh).
 *Hardware Acceleration in chrome gives occasional gltiches.*
 > 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser. You can use `enhanced-h264ify` browser extension for this .(firefox or a fork of firefox is always recommmended)
-> 3. If you need a quick setup, use my dotfiles from this repo from [this repo.](https://github.com/Chamal1120/dotfiles-linux-hyprland/tree/main)
+> 3. If you need a quick setup, use my dotfiles from [this repo.](https://github.com/Chamal1120/dotfiles-linux-hyprland/tree/main)
 
 ### Thank You
 
