@@ -1,5 +1,14 @@
 ## Linux fixes for the apple macbook pro 2015 13 inch (12,1)
 
+### What works?
+
+ - Video = Yes (Sometimes there's glitches with electron based apps when playing HW accerlated videos)
+ - Sound = Yes
+ - Ethernet = Yes
+ - Wireless = Yes (with IWD as the backend for NetworkManager)
+ - Bluetooth = Yes (But the sound quality is not good)
+ - Power Management = Yes (Auto wake with LID open has to disable)
+
 These are the fix files that I have found during my journey to make my mbp works as smoothly as possible on linux.
 
 Tested on:
@@ -10,22 +19,17 @@ Tested on:
 ### Manual Install
 
 1. Add **disable-wakeup.service** as a systemd service to disable XHC1 (which is responsible for USB wakeups) LID0 (responsible for lid based wakeups). This workaround fixes the macbook immedaitely waking up when suspended.
-2. Copy **wif_rand_mac.conf** to /etc/NetworkManager/conf.d/wifi_rand_mac.conf to disable mac randomization.
-3. Install **wpa_suppplicant 2:2.10-8** package which is the last known version that works with the wifi-driver. 
+2. Install iwd package from your package repository.
 
 ```bash
 # For Arch Linux
-curl -O https://archive.archlinux.org/packages/w/wpa_supplicant/wpa_supplicant-2:2.10-8-x86_64.pkg.tar.zst
-sudo pacman -U wpa_supplicant-2:2.10-8-x86_64.pkg.tar.zst
+sudo pacman -S iwd
 ```
 
-> [!IMPORTANT]
-> Please make sure you ignore upgrades for this package using your package manager config.
-> For Arch Add 'IgnorePKg = wpa_supplicant' to your /etc/pacman.conf.
-
+5. Copy **wif_backend.conf** to **/etc/NetworkManager/conf.d/** to make iwd as the wifi backend for NetworkManager.
 4. Install **mpbfan** and **tlp** from your distro's package repositories.
-5. Copy **mpbfan.conf** to /etc/ to get my fan speed thresholds.
-6. Copy **tlp.conf** to /etc/ to get my custom cpu frequency thresholds.
+5. Copy **mpbfan.conf** to **/etc/** to get my fan speed thresholds.
+6. Copy **tlp.conf** to **/etc/** to get my custom cpu frequency thresholds.
 
 Optional:
 
@@ -50,7 +54,7 @@ yay -S macbook-12-1-linux-fixes
 > [!TIP]
 > 1. To get HW acceleration enabled for h264 videos. You can run `sudo pacman -S intel_media_driver` and add `LIBVA_DRIVER_NAME=iHD` to your shell configuration file. (ie - .zshrc for zsh).
 *Hardware Acceleration in chrome gives occasional gltiches.*
-> 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser. You can use `enhanced-h264ify` browser extension for this .(firefox or a fork of firefox is always preffered)
+> 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser. You can use `enhanced-h264ify` browser extension for this .(firefox or a fork of firefox is always recommmended)
 > 3. If you need a quick setup, use my dotfiles from this repo from [this repo.](https://github.com/Chamal1120/dotfiles-linux-hyprland/tree/main)
 
 ### Thank You
