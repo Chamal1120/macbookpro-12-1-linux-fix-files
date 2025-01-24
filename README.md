@@ -1,7 +1,7 @@
 ## Linux fixes for the apple macbook pro 2015 13 inch (12,1)
 These are the fix files that I have found during my journey to make my mbp works as smoothly as possible on linux.
 
-### What works?
+## What works?
 
  - Video = Yes (Sometimes there's glitches with electron based apps when playing HW accerlated videos)
  - Sound = Yes
@@ -16,7 +16,7 @@ Tested on:
 - distro: Arch linux, EndeavourOS, Opensuse tumbleweed
 - WMs: i3, sway and Hyprland
 
-### Manual Install
+## Manual Install
 
 1. Add **disable-wakeup.service** as a systemd service to disable XHC1 (which is responsible for USB wakeups) LID0 (responsible for lid based wakeups). This workaround fixes the macbook immedaitely waking up when suspended.
 2. Install iwd package from your package repository.
@@ -39,7 +39,7 @@ Optional:
 > You also need the remove_ignore_usb_device.sh in order to get UDEV files working.
 > More info can be found in this arch linux thread - [https://wiki.archlinux.org/title/User:Elinux/MacBook_Pro_12,1#Powersave](https://wiki.archlinux.org/title/User:Elinux/MacBook_Pro_12,1#Powersave)
 
-### Package Installers
+## Package Installers
 
 An AUR package is available for Arch Linux users.
 
@@ -49,7 +49,7 @@ yay -S macbook-12-1-linux-fixes
 > [!IMPORTANT]
 > Don't forget to follow the instructions displayed after the installation.
 
-### Some extra Tips
+## Some extra Tips
 
 > [!TIP]
 > 1. To get HW acceleration enabled for h264 videos. You can run `sudo pacman -S intel_media_driver` and add `LIBVA_DRIVER_NAME=iHD` to your shell configuration file. (ie - .zshrc for zsh).
@@ -57,7 +57,7 @@ yay -S macbook-12-1-linux-fixes
 > 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser. You can use `enhanced-h264ify` browser extension for this .(firefox or a fork of firefox is always recommmended)
 > 3. If you need a quick setup, use my dotfiles from [this repo.](https://github.com/Chamal1120/dotfiles-linux-hyprland/tree/main)
 
-### Thank You
+## Thank You
 
 Huge thank to all the contributors of the softwares that I have used here and all the people who posted and answered the questions in reddit threads, arch wiki, stack overflow and stack exchange.
 
