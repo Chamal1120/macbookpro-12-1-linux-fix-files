@@ -8,8 +8,8 @@ These are the fix files that I have found during my journey to make my mbp works
  - Ethernet = Yes
  - Wireless = Yes (with IWD as the backend for NetworkManager)
  - Bluetooth = Yes (But the sound quality is not good)
- - Power Management = Yes (Auto wake with LID open has to disable)
-
+ - Power Management = Yes
+ - Suspend/resume - Yes (But auto wake with Lid open has to disable)
 
 Tested on:
 - kernel: 6.10.4-arch2-1 to 6.12.7-arch1-1(mainline), 6.6.70-1-lts (lts)
@@ -26,14 +26,14 @@ Tested on:
 sudo pacman -S iwd
 ```
 
-5. Copy **wif_backend.conf** to **/etc/NetworkManager/conf.d/** to make iwd as the wifi backend for NetworkManager.
+5. Copy **wifi_backend.conf** to **/etc/NetworkManager/conf.d/** to make iwd as the wifi backend for NetworkManager.
 4. Install **mpbfan** and **tlp** from your distro's package repositories.
-5. Copy **mpbfan.conf** to **/etc/** to get my fan speed thresholds.
+5. Copy **mpbfan.conf** to **/etc/** to get my custom fan speed thresholds.
 6. Copy **tlp.conf** to **/etc/** to get my custom cpu frequency thresholds.
 
 Optional:
 
-1. The UDEV rule files are from an arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if you need them.
+1. The UDEV rule files are from an arch linux thread to fix battery drain from disabling cardreader and bluetooth. Use them if needed.
 
 > [!NOTE]
 > You also need the remove_ignore_usb_device.sh in order to get UDEV files working.
@@ -57,8 +57,12 @@ yay -S macbook-12-1-linux-fixes
 > 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser. You can use `enhanced-h264ify` browser extension for this .(firefox or a fork of firefox is always recommmended)
 > 3. If you need a quick setup, use my dotfiles from [this repo.](https://github.com/Chamal1120/dotfiles-linux-hyprland/tree/main)
 
+## Contributing
+
+This is an open source project started coz I don't want anyone else to go through the same hell that I went. So any **contribution to make this even better at least a little bit is always welcome**.
+
 ## Thank You
 
 Huge thank to all the contributors of the softwares that I have used here and all the people who posted and answered the questions in reddit threads, arch wiki, stack overflow and stack exchange.
 
-If you think this was helpful to you please star the repo and share with others whome who think might be struggling to fix these issues.
+If you think this was helpful to you please star the repo and share so others can discover too.
