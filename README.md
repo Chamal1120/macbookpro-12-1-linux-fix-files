@@ -1,5 +1,13 @@
-## Linux fixes for the apple macbook pro 2015 13 inch (12,1)
+<div align="center">
+
+# MacBook 12,1 Linux Fixes
+![AUR Version](https://img.shields.io/aur/version/macbook-12-1-linux-fixes?style=for-the-badge&logo=archlinux&logoColor=ffffff)
+![AUR Maintainer](https://img.shields.io/aur/maintainer/macbook-12-1-linux-fixes?style=for-the-badge&logo=retroarch&logoColor=ffffff&color=%23eba0ac)
+![GitHub License](https://img.shields.io/github/license/Chamal1120/macbookpro-12-1-linux-fix-files?style=for-the-badge&logo=google%20docs&logoColor=ffffff)
+
 These are the fix files that I have found during my journey to make my mbp works as smoothly as possible on linux.
+
+</div>
 
 ## What works?
 
