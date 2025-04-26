@@ -11,13 +11,13 @@ These are the fix files that I have found during my journey to make my mbp works
 
 ## What works?
 
- - Video = Yes (Sometimes there's glitches with electron based apps when playing HW accerlated videos)
+ - Video = Yes
  - Sound = Yes
  - Ethernet = Yes
  - Wireless = Yes (with IWD as the backend for NetworkManager)
  - Bluetooth = Yes (But the sound quality is not good)
  - Power Management = Yes
- - Suspend/resume - Yes (But auto wake with Lid open has to disable)
+ - Suspend/resume - Yes (But auto wake with Lid open feature has to disable)
 
 Tested on:
 - kernel: 6.10.4-arch2-1 to 6.12.7-arch1-1(mainline), 6.6.70-1-lts (lts)
@@ -61,13 +61,14 @@ yay -S macbook-12-1-linux-fixes
 
 > [!TIP]
 > 1. To get HW acceleration enabled for h264 videos. You can run `sudo pacman -S intel_media_driver` and add `LIBVA_DRIVER_NAME=iHD` to your shell configuration file. (ie - .zshrc for zsh).
-*Hardware Acceleration in chrome gives occasional gltiches.*
-> 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser. You can use `enhanced-h264ify` browser extension for this .(firefox or a fork of firefox is always recommmended)
+*Hardware Acceleration in many chromium based browsers give occasional gltiches.*
+(Workaround: Use Vivaldi browser)
+> 2. For Youtube HW acceleration and to fix batttery drain issues you should disable AV1 and VP9 codecs in the browser, you can use `enhanced-h264ify` browser exrtension.
 > 3. If you need a quick setup, use my dotfiles from [this repo.](https://github.com/Chamal1120/dotfiles-linux-hyprland/tree/main)
 
 ## Contributing
 
-This is an open source project started coz I don't want anyone else to go through the same hell that I went. So any **contribution to make this even better at least a little bit is always welcome**.
+This is an open source project licensed under **MIT**. Started this coz I don't want anyone else to go through the same hell that I went. So any **contribution to make this even better at least a little bit is always welcome**.
 
 ## Thank You
 
