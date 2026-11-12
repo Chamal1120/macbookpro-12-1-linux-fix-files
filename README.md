@@ -9,6 +9,9 @@
 
 </div>
 
+> [!WARNING]
+> I no longer maintain this repo as I lost my beloved MBP 12,1. Please go to [this](https://github.com/lakotamm/Macbook_Pro_Early_2015_A1502_Linux_Fedora) repo to get the most up to date fixes.
+
 ## What works?
  - Video = Yes
  - Sound = Yes
@@ -20,7 +23,7 @@
  - And everything else (This is my main linux box)
 
 Tested on:
-- kernel: from 6.10.4-arch2-1 to whatever the latest version as of now.
+- kernel: from 6.10.4-arch2-1.
 - distro: Arch linux
 
 ## Latest changes
